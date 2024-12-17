@@ -43,3 +43,37 @@
     right: 40px; 
     --rotate: -15deg; 
 }
+
+.fireworks {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.firework {
+    position: absolute;
+    background-color: #ff0;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    animation: firework-animation 1s linear infinite;
+}
+
+@keyframes firework-animation {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--x), var(--y)) scale(1.5);
+        opacity: 0;
+    }
+}
+canvas {
+	cursor: crosshair;
+	display: block;
+}

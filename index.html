@@ -6,7 +6,24 @@
         <title>Thổi Bánh Sinh Nhật</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="sticker.css">
+        <style>
+            /* Chữ chạy qua màn hình */
+            #birthdayMessage {
+                position: fixed;
+                top: 25%;
+                left: -100%;
+                font-size: 3em;
+                color: #FF69B4;
+                font-weight: bold;
+                animation: slideIn 5s linear forwards;
+            }
 
+            @keyframes slideIn {
+                to {
+                    left: 100%;
+                }
+            }
+        </style>
     </head>
     <body>
         <div class="cake">
@@ -22,17 +39,22 @@
                 <div class="flame"></div>
             </div>
 
-            <!-- New Stickers -->
+            <!-- Stickers -->
             <div class="cake-sticker sticker-heart sticker-1"></div>
             <div class="cake-sticker sticker-star sticker-2"></div>
-            <!-- <div class="cake-sticker sticker-balloon sticker-3"></div> -->
-
-            <!-- Additional Stickers -->
             <div class="cake-sticker sticker-flower sticker-flower-1"></div>
         </div>
 
-        <audio id="blowSound"
-            src="https://www.soundjay.com/button/sounds/button-3.mp3"></audio>
+        <!-- Sounds -->
+        <audio id="fireworksSound" src="https://www.soundjay.com/button/sounds/fireworks.mp3"></audio>
+        <audio id="happyBirthdaySound" src="happy-birthday-254480.mp3"></audio>
+        <audio id="blowSound" src="https://www.freesound.org/data/previews/380/380054_5883127-lq.mp3"></audio>
+
+        <!-- Message -->
+        <div id="birthdayMessage">Chúc mừng sinh nhật Lele!</div>
+
+        <canvas id="canvas">Canvas is not supported in your browser.</canvas>
+        <div id="fireworks"></div>
 
         <script src="script.js"></script>
     </body>
