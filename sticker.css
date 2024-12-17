@@ -1,0 +1,56 @@
+.cake-sticker {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(var(--rotate, 0deg));
+    z-index: 5;
+}
+
+/* Trái tim */
+.sticker-heart {
+    background-image: url('anh1.jpg'); /* Hình ảnh trái tim */
+    clip-path: path('M50,20 Q70,20 86,40 Q100,60 50,80 Q0,60 14,40 Q30,20 50,20'); /* Định dạng hình trái tim to hơn */
+}
+
+
+/* Bóng bay */
+.sticker-balloon {
+    background-image: url('anh3.jpg'); /* Hình ảnh bóng bay */
+    clip-path: path('M25,5 Q40,5 45,20 Q50,35 25,45 Q0,35 5,20 Q10,5 25,5'); /* Định dạng hình bóng bay */
+}
+
+/* Hình sao */
+.sticker-star {
+    background-image: url('anh2.jpg');
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Vị trí các sticker */
+.sticker-1 { 
+    top: 12px;
+    left: 69px;
+    --rotate: 15deg; 
+    width: 100px !important;
+    height: 100px !important;
+}
+
+.sticker-2 { 
+    top: 50px; 
+    right: -13px;
+    --rotate: -20deg; 
+}
+
+.sticker-3 { 
+    bottom: 40px; 
+    left: 50%; 
+    transform: translateX(-50%) rotate(10deg);
+}
+
+.sticker-4 { 
+    bottom: 70px; 
+    right: 40px; 
+    --rotate: -15deg; 
+}
